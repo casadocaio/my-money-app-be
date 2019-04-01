@@ -2,16 +2,24 @@
   "name": "my-money-app-be",
   "version": "0.1.0",
   "private": true,
+  "main": "src/loader.js",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-query-int": "^3.0.0",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.4.20",
+    "mongoose-paginate": "^5.0.3",
+    "node-restful": "^0.2.6",
+    "nodemon": "^1.18.10",
+    "pm2": "^3.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "nodemon",
+    "production": "pm2 start src/loader.js --name my-money-app-be"
   },
   "eslintConfig": {
     "extends": "react-app"
